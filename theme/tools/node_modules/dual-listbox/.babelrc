@@ -1,0 +1,12 @@
+{
+    "comments": false,
+    "compact": true,
+    "presets": [
+        "@babel/preset-env"
+    ],
+    "plugins": [
+        ["@babel/plugin-transform-spread", {
+            "loose": true
+        }]
+    ]
+}
