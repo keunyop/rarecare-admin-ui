@@ -58135,15 +58135,6 @@ code {
   .fc-unthemed .fc-toolbar .fc-button.fc-button-disabled {
     opacity: 0.7; }
 
-.gmaps {
-  /* important!  bootstrap sets max-width on img to 100% which conflicts with google map canvas*/ }
-  .gmaps img {
-    max-width: none; }
-  .gmaps.gmaps-static > div {
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    display: block; }
-
 .ion-range-slider .irs .irs-min,
 .ion-range-slider .irs .irs-max,
 .ion-range-slider .irs .irs-from,
@@ -58182,28 +58173,6 @@ code {
   position: absolute;
   top: 0;
   right: 0; }
-
-.jqvmap {
-  position: relative;
-  overflow: hidden; }
-  .jqvmap .jqvmap-zoomout,
-  .jqvmap .jqvmap-zoomin {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 20px;
-    width: 20px;
-    background-color: #EBEDF3;
-    color: #3F4254;
-    font-size: 1rem; }
-  .jqvmap .jqvmap-zoomout {
-    top: 40px; }
 
 .jstree-default .jstree-anchor {
   color: #3F4254;
@@ -60301,21 +60270,6 @@ body.swal2-height-auto {
 
 .rounded-xl .apexcharts-canvas svg {
   border-radius: 1.25rem !important; }
-
-.leaflet-container .leaflet-pane,
-.leaflet-container .leaflet-top,
-.leaflet-container .leaflet-bottom,
-.leaflet-container .leaflet-control {
-  z-index: 1 !important; }
-
-.leaflet-container .leaflet-popup-content-wrapper {
-  border-radius: 0.42rem !important;
-  text-align: center;
-  -webkit-box-shadow: 0 0.5rem 1.5rem 0.5rem rgba(0, 0, 0, 0.075) !important;
-  box-shadow: 0 0.5rem 1.5rem 0.5rem rgba(0, 0, 0, 0.075) !important; }
-  .leaflet-container .leaflet-popup-content-wrapper .leaflet-popup-content {
-    font-family: Poppins, Helvetica, "sans-serif";
-    font-size: 1rem; }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {

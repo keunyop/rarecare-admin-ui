@@ -477,16 +477,6 @@
                         "scripts": "{$config.dist}/plugins/custom/fullcalendar/fullcalendar.bundle.js"
                     }
                 },
-                "gmaps": {
-                    "src": {
-                        "scripts": [
-                            "{$config.path.node_modules}/gmaps/gmaps.js"
-                        ]
-                    },
-                    "bundle": {
-                        "scripts": "{$config.dist}/plugins/custom/gmaps/gmaps.js"
-                    }
-                },
                 "flot": {
                     "src": {
                         "scripts": [
@@ -711,23 +701,6 @@
                     "bundle": {
                         "styles": "{$config.dist}/plugins/custom/kanban/kanban.bundle.css",
                         "scripts": "{$config.dist}/plugins/custom/kanban/kanban.bundle.js"
-                    }
-                },
-                "leaflet": {
-                    "src": {
-                        "styles": [
-                            "{$config.path.node_modules}/leaflet/dist/leaflet.css",
-                            "{$config.path.node_modules}/esri-leaflet-geocoder/dist/esri-leaflet-geocoder.css"
-                        ],
-                        "scripts": [
-                            "{$config.path.node_modules}/leaflet/dist/leaflet.js",
-                            "{$config.path.node_modules}/esri-leaflet/dist/esri-leaflet.js",
-                            "{$config.path.node_modules}/esri-leaflet-geocoder/dist/esri-leaflet-geocoder.js"
-                        ]
-                    },
-                    "bundle": {
-                        "styles": "{$config.dist}/plugins/custom/leaflet/leaflet.bundle.css",
-                        "scripts": "{$config.dist}/plugins/custom/leaflet/leaflet.bundle.js"
                     }
                 }
             }
