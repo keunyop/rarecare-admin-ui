@@ -1,7 +1,8 @@
 'use strict';
 // Class definition
 
-var KTDatatableModal = function () {
+// GPPDatatableModal
+var GPPDatatableModal = function () {
 
     var initDatatable = function () {
         var el = $('#kt_datatable');
@@ -46,6 +47,12 @@ var KTDatatableModal = function () {
                 sortable: false,
                 width: 30,
                 textAlign: 'center',
+            }, {
+                field: 'GroupPurchaseId',
+                title: '공동구매ID',
+            }, {
+                field: 'GroupPurchaseName',
+                title: '공동구매명',
             }, {
                 field: 'FirstName',
                 title: 'First Name',
@@ -845,5 +852,5 @@ var KTDatatableModal = function () {
 }();
 
 jQuery(document).ready(function () {
-    KTDatatableModal.init();
+    GPPDatatableModal.init();
 });
