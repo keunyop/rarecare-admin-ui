@@ -49,22 +49,46 @@ var GPPDatatableModal = function () {
                 textAlign: 'center',
             }, {
                 field: 'FirstName',
-                title: '공동구매ID',
+                title: '공구ID',
             }, {
                 field: 'LastName',
-                title: '공동구매명',
+                title: '공구명',
             }, {
                 field: 'Company',
-                title: 'Company',
+                title: '공구회차',
             }, {
                 field: 'Email',
-                title: 'Email',
+                title: '오픈일시',
             }, {
                 field: 'Phone',
-                title: 'Phone',
+                title: '종료일시',
+            }, {
+                field: 'Type',
+                title: '결제플랫폼',
+                autoHide: false,
+                // callback function support for column rendering
+                template: function (row) {
+                    var status = {
+                        1: {
+                            'title': 'Online',
+                            'state': 'danger'
+                        },
+                        2: {
+                            'title': 'Retail',
+                            'state': 'primary'
+                        },
+                        3: {
+                            'title': 'Direct',
+                            'state': 'accent'
+                        },
+                    };
+                    return '<span class="label label-' + status[row.Type].state + ' label-dot mr-2"></span><span class="font-weight-bold text-' + status[row.Type].state +
+                        '">' +
+                        status[row.Type].title + '</span>';
+                },
             }, {
                 field: 'Status',
-                title: 'Status',
+                title: '상태',
                 // callback function support for column rendering
                 template: function (row) {
                     var status = {
@@ -100,33 +124,9 @@ var GPPDatatableModal = function () {
                     return '<span class="label label-lg font-weight-bold' + status[row.Status].class + ' label-inline">' + status[row.Status].title + '</span>';
                 },
             }, {
-                field: 'Type',
-                title: 'Type',
-                autoHide: false,
-                // callback function support for column rendering
-                template: function (row) {
-                    var status = {
-                        1: {
-                            'title': 'Online',
-                            'state': 'danger'
-                        },
-                        2: {
-                            'title': 'Retail',
-                            'state': 'primary'
-                        },
-                        3: {
-                            'title': 'Direct',
-                            'state': 'accent'
-                        },
-                    };
-                    return '<span class="label label-' + status[row.Type].state + ' label-dot mr-2"></span><span class="font-weight-bold text-' + status[row.Type].state +
-                        '">' +
-                        status[row.Type].title + '</span>';
-                },
-            }, {
                 field: 'Actions',
                 width: 130,
-                title: 'Actions',
+                title: '상세',
                 sortable: false,
                 overflow: 'visible',
                 textAlign: 'left',
@@ -134,13 +134,11 @@ var GPPDatatableModal = function () {
                 template: function (row) {
                     return '\
 		                  <button data-record-id="' + row.RecordID + '" class="btn btn-sm btn-clean" title="View records">\
-		                      <i class="flaticon2-document"></i> Details\
+		                      <i class="flaticon2-document"></i> 상세보기\
 		                  </button>';
                 },
             }],
         });
-
-        var card = datatable.closest('.card');
 
         $('#kt_datatable_search_status').on('change', function () {
             datatable.search($(this).val().toLowerCase(), 'Status');
