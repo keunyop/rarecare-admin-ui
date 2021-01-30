@@ -126,7 +126,7 @@ var GPPDatatableModal = function () {
             }, {
                 field: 'Actions',
                 width: 130,
-                title: '상세보기',
+                title: '상세',
                 sortable: false,
                 overflow: 'visible',
                 textAlign: 'left',
@@ -134,7 +134,7 @@ var GPPDatatableModal = function () {
                 template: function (row) {
                     return '\
 		                  <button data-record-id="' + row.RecordID + '" class="btn btn-sm btn-clean" title="View records">\
-		                      <i class="flaticon2-document"></i>\
+		                      <i class="flaticon2-document"></i> 상세보기\
 		                  </button>';
                 },
             }],
