@@ -13,7 +13,8 @@ var GPPDatatableModal = function () {
                 type: 'remote',
                 source: {
                     read: {
-                        url: HOST_URL + '/api/datatables/demos/customers.php',
+                        // url: HOST_URL + '/api/datatables/demos/customers.php',
+                        url: HOST_URL + '/gpps',
                     },
                 },
                 pageSize: 10, // display 20 records per page
