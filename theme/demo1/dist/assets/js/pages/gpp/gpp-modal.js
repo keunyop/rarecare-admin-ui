@@ -15,6 +15,7 @@ var GPPDatatableModal = function () {
                     read: {
                         // url: HOST_URL + '/api/datatables/demos/customers.php',
                         url: HOST_URL + '/gpps',
+                        method: 'GET'
                     },
                 },
                 pageSize: 10, // display 20 records per page
@@ -64,28 +65,28 @@ var GPPDatatableModal = function () {
                 field: 'Phone',
                 title: '종료일시',
             }, {
-                field: 'Type',
+                field: 'PaymentPlatformDscd',
                 title: '결제플랫폼',
                 autoHide: false,
                 // callback function support for column rendering
                 template: function (row) {
                     var status = {
-                        1: {
+                        01: {
                             'title': 'Online',
                             'state': 'danger'
                         },
-                        2: {
+                        02: {
                             'title': 'Retail',
                             'state': 'primary'
                         },
-                        3: {
+                        03: {
                             'title': 'Direct',
                             'state': 'accent'
                         },
                     };
-                    return '<span class="label label-' + status[row.Type].state + ' label-dot mr-2"></span><span class="font-weight-bold text-' + status[row.Type].state +
+                    return '<span class="label label-' + status[row.PaymentPlatformDscd].state + ' label-dot mr-2"></span><span class="font-weight-bold text-' + status[row.PaymentPlatformDscd].state +
                         '">' +
-                        status[row.Type].title + '</span>';
+                        status[row.PaymentPlatformDscd].title + '</span>';
                 },
             }, {
                 field: 'Status',
@@ -146,7 +147,7 @@ var GPPDatatableModal = function () {
         });
 
         $('#kt_datatable_search_type').on('change', function () {
-            datatable.search($(this).val().toLowerCase(), 'Type');
+            datatable.search($(this).val().toLowerCase(), 'PaymentPlatformDscd');
         });
 
         $('#kt_datatable_search_status, #kt_datatable_search_type').selectpicker();
